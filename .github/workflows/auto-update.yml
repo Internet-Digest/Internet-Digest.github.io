@@ -10,6 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # ДАЕМ РОБОТУ ПРАВА НА ЗАПИСЬ
+    permissions:
+      contents: write
 
     steps:
       # 1. Скачиваем код из репозитория
