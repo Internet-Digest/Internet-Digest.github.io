@@ -31,6 +31,7 @@ def build_html(items):
         html += '                <a class="share-tg" title="Поделиться в Telegram">Telegram</a>\n'
         html += '                <a class="share-tw" title="Поделиться в Twitter (X)">Twitter</a>\n'
         html += '            </div>\n'
+        html += '        </div>\n'
         html += '    </div>\n'
         html += '</article>\n'
     
@@ -47,8 +48,7 @@ def update_index_file(html_content):
 
     # Используем регулярное выражение для замены контента между метками
     new_content = re.sub(
-        r'<!-- START_DIGEST -->(.|
-)*?<!-- END_DIGEST -->',
+        r'<!-- START_DIGEST -->(.|\n)*?<!-- END_DIGEST -->',
         html_content,
         content,
         flags=re.DOTALL
