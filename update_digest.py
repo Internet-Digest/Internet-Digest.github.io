@@ -48,8 +48,7 @@ def update_index_file(html_content):
 
     # Use a regular expression to replace the content between the markers
     new_content = re.sub(
-        r'<!-- START_DIGEST -->(.|
-)*?<!-- END_DIGEST -->',
+        r'<!-- START_DIGEST -->(.|\n)*?<!-- END_DIGEST -->',
         html_content,
         content,
         flags=re.DOTALL
