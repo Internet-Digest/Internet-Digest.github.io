@@ -1,0 +1,149 @@
+/* Основные стили */
+:root {
+    --bg-color: #121212;
+    --card-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --title-color: #ffffff;
+    --accent-color: #ff7043; /* Огненный оранжевый */
+    --accent-cyan: #00ffff; /* Бирюзовый из старого дизайна */
+    --border-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: var(--title-color);
+    font-size: 3em;
+    margin: 0;
+}
+
+header .subtitle {
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+/* Лента новостей */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Карточки с новостями */
+.digest-item {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.digest-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.digest-item h2 {
+    color: var(--title-color);
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.digest-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.source-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.source-link:hover {
+    text-decoration: underline;
+}
+
+/* Рекламный/Спонсорский блок */
+.ad-block {
+    background-color: #1a222e;
+    border: 1px solid var(--accent-cyan);
+    text-align: center;
+}
+
+.ad-block:hover {
+    border-color: var(--accent-cyan); /* Остается бирюзовым при наведении */
+}
+
+.ad-block h2 {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+}
+
+.ad-block p {
+     color: #a0f0f0;
+     font-size: 1.1rem;
+}
+
+.ad-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-cyan);
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.ad-button:hover {
+    background-color: #00cccc;
+    color: #fff;
+}
+
+
+/* Подвал и кнопка доната */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.donate-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.donate-button:hover {
+    background-color: #ff8a65;
+}
